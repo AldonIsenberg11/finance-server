@@ -21,3 +21,7 @@ Server set to manage stock data
 The idea is that we should be able to evaluate if a dividend paying stock is undervalued/overvalued based on it's 
 current dividend yield in relative to it's past dividend yield.
 
+# UI portion
+
+https://www.chartjs.org/docs/latest/
+Vue Specific: https://vue-chart-3.netlify.app/guide/usage/
