@@ -1,0 +1,22 @@
+{
+  "name": "finance-server",
+  "version": "1.0.0",
+  "description": "Server set to manage stock data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AldonIsenberg11/finance-server.git"
+  },
+  "author": "Aldon Isenberg II",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AldonIsenberg11/finance-server/issues"
+  },
+  "homepage": "https://github.com/AldonIsenberg11/finance-server#readme",
+  "dependencies": {
+    "mongoose": "^6.5.0"
+  }
+}
