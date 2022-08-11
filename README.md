@@ -4,7 +4,7 @@ Server set to manage stock data
 # TODO:
 
 - [ ] Setup Express Server
-- [ ] Setup Database
+- [x] Setup Database
 - [ ] Setup Chron Job to fetch data for DB
 - [ ] Add routes
 - [ ] Add basic auth for External UI to fetch data
