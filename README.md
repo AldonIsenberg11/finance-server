@@ -3,11 +3,21 @@ Server set to manage stock data
 
 # TODO:
 
-- [ ] Setup Express Server
+- [X] Setup Express Server
 - [x] Setup Database
 - [ ] Setup Chron Job to fetch data for DB
+ - [ ] Daily snapshot for single stock (Start with IBM)
+ - [ ] Process multiple 
 - [ ] Add routes
-- [ ] Add basic auth for External UI to fetch data
+  - [x] Stock Snapshot
+  - [ ] Stock Profile
+- [ ] Add Models
+  - [x] Stock Snapshot
+  - [ ] Stock Profile
+- [ ] Security - production ready
+  - [ ] Add basic auth for External UI to fetch data
+  - [ ] Trim Down CORS
+- [ ] Convert to Typescript
 
 # Data:
 
