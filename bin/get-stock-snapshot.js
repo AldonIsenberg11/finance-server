@@ -21,63 +21,16 @@ function disconnect(exitStatus = 0) {
 function run() {
   Promise.all([database.connect()])
     .then(async () => {
-        console.log(`Running Program`)
-
         const snapshot = await retrieveDailySnapshot({ticker: 'IBM'})
 
         console.log({testSnapshot: snapshot})
+        return disconnect()
 
-        // const requestOpts = {
-        //     hostname: 'api.polygon.io',
-        //     path: `/v1/open-close/${ticker}/2022-07-29`, // YYYY-MM-DD
-        //     method: 'GET',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Authorization': `Bearer ${token}`
-        //     }
-        // }
-
-        // get(requestOpts, (res) => {
-        //     let data = '';
-        //     res.on('data', (chunk) => { data += chunk })
-        //     res.on('end', () => {
-        //         const result = JSON.parse(data)
-        //         console.log({ result })
-        //         saveDailySnapshot(result, (err) => {
-        //             if (err) return disconnect(1)
-        //             return disconnect()
-        //         })
-        //     })
-        // }).on("error", (err) => {
-        //     console.error("Error: ", inspect(err))
-        //     return disconnect(1)
-        // })
     })
     .catch((e) => {
         console.error(e)
         return disconnect(1)
     })
 }
-
-// async function saveDailySnapshot(data, cb) {
-//     const recordAlreadyExists = await Snapshot.findOne({
-//         ticker: data.symbol,
-//         date: new Date(data.from)
-//     })
-
-//     console.log({recordAlreadyExists})
-
-//     if (recordAlreadyExists) {
-//         throw new Error("Record already exists")
-//     }
-
-//     const snapshot = new Snapshot(data)
-    
-//     snapshot.date = new Date(data.from)
-//     snapshot.ticker = data.symbol
-
-//     await snapshot.save()
-//     return cb()
-// }
 
 run()
