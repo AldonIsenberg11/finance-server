@@ -46,6 +46,14 @@ module.exports.triggerDailySnapshot = async function (data) {
     return snapshot
 }
 
+module.exports.getBreakdown = async function (opts = {}, v2) {
+    console.log("getBreakdown.opts", {opts, v2})
+    const stockData = await Snapshot.find();
+
+    console.log({stockData})
+    return stockData
+}
+
 // module.exports.saveDailySnapshot =  async function (data, cb) {
 //     const recordAlreadyExists = await Snapshot.findOne({
 //         ticker: data.symbol,
