@@ -27,7 +27,7 @@ module.exports.triggerDailySnapshot = async function (data) {
     }
     
     const url = `https://api.polygon.io/v1/open-close/${ticker}/${date}`
-    const token = process.env.POLYGON_API_KEY || '65IG2fDiID7Jf4pXlOmjk6RNIjo6oFsV'
+    const token = process.env.POLYGON_API_KEY
     const headers = { 'Accept': 'application/json', 'Authorization': `Bearer ${token}`}
 
     const result = await axios.get(url, { headers } )
